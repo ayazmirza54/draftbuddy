@@ -1,0 +1,78 @@
+/* ─── BuddyCharacter Theme Tokens ─── */
+.buddy-stage {
+  --buddy-body: #4ade80;
+  --buddy-accent: #86efac;
+  --buddy-face: #ffffff;
+  --buddy-paper: rgba(255, 255, 255, 0.06);
+  --buddy-line: rgba(74, 222, 128, 0.25);
+  --buddy-sparkle: #4ade80;
+
+  filter: drop-shadow(0 8px 20px rgba(74, 222, 128, 0.1));
+  display: block;
+  margin: 0 auto;
+}
+
+/* ─── Float ─── */
+@keyframes buddyFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+.buddy-character {
+  animation: buddyFloat 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* ─── Write Movement ─── */
+@keyframes buddyWrite {
+  0% { transform: translate(25px, 22px); }
+  45% { transform: translate(135px, 22px); }
+  50% { transform: translate(135px, 12px); }
+  95% { transform: translate(25px, 12px); }
+  100% { transform: translate(25px, 22px); }
+}
+
+.buddy-writer-group {
+  animation: buddyWrite 4.5s infinite ease-in-out;
+}
+
+/* ─── Line Reveal ─── */
+@keyframes buddyLineReveal {
+  0% { stroke-dashoffset: 120; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.buddy-text-line {
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: buddyLineReveal 4.5s infinite linear;
+}
+
+/* ─── Blink ─── */
+@keyframes buddyBlink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+
+.buddy-eye {
+  animation: buddyBlink 4s infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+/* ─── Sparkle Pulse ─── */
+@keyframes buddySparkle {
+  0%, 100% { transform: scale(0.5); opacity: 0.3; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+.buddy-sparkle {
+  animation: buddySparkle 2s infinite ease-in-out;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+/* ─── Delays ─── */
+.buddy-delay-1 { animation-delay: 0.5s; }
+.buddy-delay-2 { animation-delay: 1.0s; }
+.buddy-delay-3 { animation-delay: 1.5s; }

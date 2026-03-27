@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="-2 -2 64 64">
+  <!-- Body -->
+  <rect x="10" y="12" width="40" height="35" rx="12" fill="#4ade80"/>
+  <rect x="14" y="16" width="32" height="20" rx="8" fill="#86efac" fill-opacity="0.5"/>
+  <!-- Eyes -->
+  <circle cx="22" cy="26" r="3.5" fill="#ffffff"/>
+  <circle cx="38" cy="26" r="3.5" fill="#ffffff"/>
+  <!-- Antenna -->
+  <line x1="30" y1="12" x2="30" y2="4" stroke="#4ade80" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="30" cy="3" r="3" fill="#4ade80"/>
+  <!-- Pen Arm -->
+  <g transform="translate(42,32) rotate(15)">
+    <rect x="0" y="0" width="4.5" height="15" rx="2" fill="#4ade80"/>
+    <path d="M0 15 L2.25 22 L4.5 15 Z" fill="#71717a"/>
+  </g>
+  <!-- Smile -->
+  <path d="M25 32 Q30 36 35 32" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none"/>
+</svg>
